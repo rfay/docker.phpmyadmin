@@ -1,0 +1,5 @@
+FROM UPSTREAM_REPO
+
+RUN apk add --no-cache curl
+
+HEALTHCHECK CMD curl --fail http://localhost > /dev/null || exit 1
